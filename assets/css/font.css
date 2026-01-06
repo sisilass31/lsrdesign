@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Ranade-Bold';
+  src: url('../font/Ranade-Bold.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranade-Bold';
+  src: url('../font/Ranade-Light.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranade-Bold';
+  src: url('../font/Ranade-Medium.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranade-Bold';
+  src: url('../font/Ranade-Regular.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranade-Bold';
+  src: url('../font/Ranade-Thin.otf') format('opentype');
+  font-style: normal;
+}

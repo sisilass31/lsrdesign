@@ -1,0 +1,243 @@
+/* LANDING START */
+/* HERO CONTAINER */
+
+.hero-container {
+  background-image: url(../images/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: calc(100dvh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.title-container {
+  position: absolute;
+  top: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0 30px;
+}
+
+.title-container h1 {
+  font-size: 6vw;
+}
+
+.title-container p {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+}
+
+.mini-title {
+  box-shadow: 0 0 0 1px var(--color-accent);
+  background: var(--clear-gradient);
+  padding: 6px 12px;
+  width: fit-content;
+  font-size: 14px;
+}
+
+/* pourquoi lsr */
+
+.why-container {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.why-container h2 {
+  font-size: 32px;
+}
+
+.icon-why {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.why-card:hover .icon-why,
+.why-card:hover h3 {
+  color: var(--color-accent);
+}
+
+.why-card:hover .icon-why {
+  border: 1px solid var(--color-accent-clear);
+  box-shadow: 0 0px 8px 0px var(--color-accent-clear);
+}
+
+.why-cards-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  gap: 55px;
+}
+
+.why-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 350px;
+}
+
+.why-text h3 {
+  font-size: 20px;
+}
+
+.why-text p {
+  padding-top: 6px;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  max-width: 350px;
+}
+
+/* offre */
+
+.offre-container {
+  background-color: var(--color-bg);
+  background-image: url("../images/back-offre.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  z-index: 9999;
+
+  padding: 40px;
+  gap: 30px;
+  border-radius: 28px;
+  border: 1px solid var(--color-accent-clear);
+  box-shadow: inset 0 0px 8px 0px var(--color-accent-clear);
+}
+
+.offre-container h3 {
+  font-size: 32px;
+}
+
+.offre-container p {
+  width: 80%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--color-bg-clear);
+  padding: 10px 20px;
+  border-radius: 9999px;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--color-border);
+}
+
+.btn:hover {
+  transform: scale(1.06);
+}
+
+/* À PROPOS */
+
+/* LANDING END */
+
+/* PORTFOLIO */
+
+/* SERVICES */
+
+/* TARIFS */
+
+/* CONTACT */
+
+/* RESPONSIVE */
+@media screen and (max-width: 1315px) {
+  .why-cards-container {
+    gap: 20px;
+  }
+  .why-text h3 {
+    font-size: 18px;
+  }
+
+  .why-text p {
+    font-size: 14px;
+  }
+
+  .icon-why {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .why-cards-container {
+    flex-wrap: wrap;
+  }
+
+  .why-cards-container {
+    gap: 50px;
+  }
+
+  .why-card {
+    max-width: inherit;
+    width: calc(50% - 25px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .title-container h1 {
+    font-size: 26px;
+  }
+
+  .title-container p {
+    font-size: 16px;
+  }
+
+  .title-container {
+    gap: 18px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .offre-container h3 {
+    font-size: 20px;
+  }
+
+  .offre-container p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .offre-container .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .offre-container {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .why-cards-container {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 35px;
+  }
+
+  .why-card {
+    width: 100% !important;
+  }
+
+  .title-container h1 {
+    font-size: 26px;
+  }
+  .why-container h2 {
+    font-size: 22px;
+  }
+}
