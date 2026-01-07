@@ -49,10 +49,6 @@
   padding-top: 40px;
 }
 
-.why-container h2 {
-  font-size: 32px;
-}
-
 .icon-why {
   width: 64px;
   height: 64px;
@@ -66,7 +62,15 @@
 
 .why-card:hover .icon-why,
 .why-card:hover h3 {
-  color: var(--color-accent);
+  background: var(--gradient);
+  background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.why-card:hover .why-text p {
+  color: var(--color-text);
 }
 
 .why-card:hover .icon-why {
@@ -114,17 +118,13 @@
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  z-index: 9999;
+  z-index: 9998;
 
   padding: 40px;
   gap: 30px;
   border-radius: 28px;
   border: 1px solid var(--color-accent-clear);
   box-shadow: inset 0 0px 8px 0px var(--color-accent-clear);
-}
-
-.offre-container h3 {
-  font-size: 32px;
 }
 
 .offre-container p {
@@ -142,6 +142,132 @@
 
 .btn:hover {
   transform: scale(1.06);
+}
+
+/* temoignage */
+
+.temoignage-header {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.temoignage-header p {
+  color: var(--color-text-secondary);
+  padding-top: 8px;
+  font-weight: 400;
+}
+
+.temoignage-container {
+  position: relative;
+  overflow: hidden;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-bg) 10%,
+    var(--color-bg) 90%,
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-bg) 10%,
+    var(--color-bg) 90%,
+    transparent
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.temoignage-card {
+  cursor: pointer;
+  background: linear-gradient(
+    0deg,
+    var(--color-bg) 0%,
+    var(--color-surface) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.profile-temoignage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-name h4 {
+  font-size: 14px;
+}
+
+.profile-name p {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.temoignage-text {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.profile-pic img {
+  width: 100%;
+}
+
+.profile-pic {
+  width: 40px;
+}
+.temoignage-box {
+  overflow: hidden;
+  width: 100%;
+}
+
+.temoignage-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+/* Animations */
+.temoignage-box1 .temoignage-track {
+  animation: scroll-left 35s linear infinite;
+}
+
+.temoignage-box2 .temoignage-track {
+  animation: scroll-right 45s linear infinite;
+  animation-delay: -10s;
+}
+
+/* Pause */
+.temoignage-box:hover .temoignage-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 /* À PROPOS */
@@ -191,6 +317,42 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .temoignage-card {
+    min-width: 240px;
+  }
+
+  .temoignage-container {
+    gap: 20px;
+  }
+
+  .temoignage-slider {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 2%,
+      black 98%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 2%,
+      black 98%,
+      transparent
+    );
+  }
+
+  .title-font-secondary {
+    line-height: 1.2;
+  }
+
+  .temoignage-header p {
+    font-size: 14px;
+    padding-top: 6px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .title-container h1 {
     font-size: 26px;
@@ -203,8 +365,6 @@
   .title-container {
     gap: 18px;
   }
-}
-@media screen and (max-width: 900px) {
   .offre-container h3 {
     font-size: 20px;
   }
@@ -223,6 +383,37 @@
   }
 }
 
+@media screen and (max-width: 750px) {
+  .temoignage-section {
+    padding: 20px 0;
+  }
+  .temoignage-card {
+    max-width: 250px;
+    padding: 16px;
+  }
+
+  .temoignage-text {
+    font-size: 12px;
+  }
+
+  .profile-name h4 {
+    font-size: 12px;
+  }
+
+  .profile-name p {
+    font-size: 10px;
+  }
+
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-temoignage {
+    gap: 8px;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .why-cards-container {
     flex-direction: column;
@@ -237,7 +428,7 @@
   .title-container h1 {
     font-size: 26px;
   }
-  .why-container h2 {
+  .title-secondary {
     font-size: 22px;
   }
 }

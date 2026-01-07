@@ -13,7 +13,7 @@
   --color-bg-clear: #0a0a0ab5;
   --color-text: #ededed;
   --color-text-secondary: #edededa8;
-  --color-surface: #121212;
+  --color-surface: #161616;
   --color-border: rgba(255, 255, 255, 0.2);
   --color-accent: #ff7000;
   --color-accent-dark: #ff2800;
@@ -43,8 +43,20 @@ body {
   font-family: "Poppins", serif;
 }
 
+main {
+  margin-top: 80px;
+}
+
+header {
+  z-index: 9999;
+  position: absolute;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
 ::selection {
-  background: #e63d10;
+  background: #e6541075;
   color: var(--color-text);
 }
 
@@ -79,6 +91,7 @@ ul li {
 .fw {
   font-weight: 300;
 }
+
 /* buttons */
 
 button {
@@ -123,6 +136,11 @@ button {
 .border-hover:hover {
   border: 1px solid var(--color-accent-clear);
 }
+
+.title-secondary {
+  font-size: 32px;
+}
+
 /* general */
 
 .finisher-header {
@@ -142,11 +160,6 @@ button {
 
 #burgerBtn {
   display: none;
-}
-
-header {
-  z-index: 9999;
-  position: relative;
 }
 
 .navbar-logo img {
@@ -235,7 +248,7 @@ header {
   color: var(--color-text);
   display: flex;
   flex-direction: column;
-  padding: 35px;
+  padding: 20px;
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
@@ -501,10 +514,12 @@ header {
 
 @media screen and (max-width: 750px) {
   .all-content {
-    padding: 30px;
+    padding: 20px;
     gap: 50px;
   }
-
+  .title-secondary {
+    font-size: 22px;
+  }
   .copyright {
     flex-direction: column;
     gap: 15px;
