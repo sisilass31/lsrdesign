@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new FinisherHeader({
     count: 80,
     size: { min: 2, max: 4, pulse: 0 },
-    speed: { x: { min: 0, max: 0.2 }, y: { min: 0, max: 0.2 } },
+    speed: { x: { min: 0, max: 0.3 }, y: { min: 0, max: 0.3 } },
     colors: { particles: colors },
     blending: blending,
     opacity: { center: 1, edge: 0 },

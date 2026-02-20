@@ -35,6 +35,9 @@
 }
 
 .mini-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   box-shadow: 0 0 0 1px var(--color-accent);
   background: var(--clear-gradient);
   padding: 6px 12px;
@@ -149,6 +152,10 @@
 .temoignage-header {
   text-align: center;
   padding: 0 20px;
+}
+
+.temoignage-section {
+  padding-bottom: 50px;
 }
 
 .temoignage-header p {
@@ -270,15 +277,101 @@
   }
 }
 
-/* À PROPOS */
-
 /* LANDING END */
+
+/* À PROPOS */
 
 /* PORTFOLIO */
 
 /* SERVICES */
 
 /* TARIFS */
+.tarifs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.tarifs-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.title-container-tarifs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.tarifs-cards-box {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tarifs-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border-radius: 16px;
+  gap: 18px;
+  padding: 20px;
+  max-width: 350px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.tarifs-card:hover {
+  transform: scale(1.02);
+}
+
+.tarif-card-avantages {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 0 26px 0;
+}
+
+.tarif-card-avantages li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.tarif-card-avantages li i {
+  color: var(--color-accent);
+  font-size: 16px;
+}
+
+.plan {
+  padding: 5px 20px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-surface) 30%,
+    var(--color-bg) 100%
+  );
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.price .new {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.price .old {
+  color: var(--color-text-secondary);
+}
 
 /* CONTACT */
 
@@ -381,6 +474,10 @@
   .offre-container {
     padding: 25px;
   }
+  .tarifs-card {
+    max-width: inherit;
+    width: calc(50% - 38px);
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -411,6 +508,38 @@
 
   .profile-temoignage {
     gap: 8px;
+  }
+
+  .tarifs-cards-box {
+    flex-direction: column;
+  }
+  .tarifs-cards {
+    align-items: start;
+    gap: 12px;
+  }
+  .tarifs-card {
+    width: 100%;
+    max-width: inherit;
+    gap: 10px;
+  }
+  .tarifs-container {
+    gap: 28px;
+  }
+  .title-container-tarifs {
+    align-items: start;
+  }
+  .tarifs-container {
+    padding: 30px 0;
+  }
+  .title-txt {
+    text-align: start;
+  }
+  .tarif-card-avantages {
+    padding: 8px 0 16px 0;
+  }
+
+  .price .new {
+    font-size: 40px;
   }
 }
 
